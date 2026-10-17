@@ -1,0 +1,31 @@
+# --- Build output ---
+target/
+backend/target/
+*.class
+
+# --- Logs ---
+*.log
+run.log
+
+# --- Secrets / local env ---
+.env
+*.local.yml
+application-local.yml
+
+# --- Tooling / editor config (kisisel) ---
+.opencode/
+.commandcode/
+.vscode/
+opencode.json
+
+# --- Docs PDFs (mevzuat belgeleri) ---
+doc/*.pdf
+
+# --- OS ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- IDE ---
+.idea/
+*.iml

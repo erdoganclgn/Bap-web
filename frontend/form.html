@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAP Proje Başvurusu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <h1>BAP Otomasyonu — Yeni Proje Formu</h1>
+    </nav>
+
+    <div class="container">
+        <form id="projeForm" class="card" autocomplete="off" enctype="multipart/form-data">
+            <div class="field">
+                <label for="baslik">Proje başlığı:</label>
+                <input type="text" name="baslik" id="baslik" required placeholder="Proje başlığını girin...">
+            </div>
+
+            <div class="field">
+                <label for="ozet">Proje özeti:</label>
+                <input type="text" name="ozet" id="ozet" required placeholder="Proje özetini girin...">
+            </div>
+
+            <div class="field">
+                <label for="anahtarkelimeler">Anahtar kelimeler:</label>
+                <button type="button" class="btn btn-secondary" id="ekle">Ekle</button>
+                <div id="keyvalue"></div>
+                <div class="status" id="anahtarDurum"></div>
+            </div>
+
+            <div class="field">
+                <label for="temelAlan">Temel alan grubunu seçin:</label>
+                <select name="temelAlan" id="temelAlan">
+                    <option value="">temel alanı seçiniz...</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="subField">Alt alan seçin:</label>
+                <select name="subField" id="subField" disabled>
+                    <option value="">alt alan seçiniz...</option>
+                </select>
+                <div class="status" id="altAlanDurum"></div>
+            </div>
+
+            <div class="field">
+                <label for="project_type">Proje türü:</label>
+                <select name="project_type" id="project_type" required>
+                    <option value="">seçiniz</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="startDate">Başlangıç tarihi:</label>
+                <input type="date" name="startDate" id="startDate" required>
+            </div>
+
+            <div class="field">
+                <label for="endDate">Bitiş tarihi:</label>
+                <input type="date" name="endDate" id="endDate" required>
+            </div>
+
+            <div class="field">
+                <label for="butceTalebi">Talep edilen bütçe:</label>
+                <input type="number" name="butceTalebi" id="butceTalebi" min="0" step="0.01">
+            </div>
+
+            <div class="field">
+                <label for="arastirmaci">Araştırmacı ekleyin:</label>
+                <input type="text" name="arastirmaci" id="arastirmaci" placeholder="Araştırmacı e-posta / adı...">
+            </div>
+            <div class="field">
+                <label for="arastirmaciCv">arastirmacinin cvsini ekleyin: </label><br>
+                <input type="file" name="arastirmaciCv" id="arastirmaciCv" placeholder="arastirmaci CV">
+            </div>
+
+            <div class="field">
+                <button type="button" class="btn" id="kaydet">Kaydet</button>
+                <span class="status" id="kaydetDurum"></span>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>

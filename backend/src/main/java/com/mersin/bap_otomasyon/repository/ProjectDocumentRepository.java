@@ -1,0 +1,11 @@
+package com.mersin.bap_otomasyon.repository;
+
+import com.mersin.bap_otomasyon.entity.ProjectDocument;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface ProjectDocumentRepository extends JpaRepository<ProjectDocument, UUID> {
+    List<ProjectDocument> findByProjectId(UUID projeId);
+}
